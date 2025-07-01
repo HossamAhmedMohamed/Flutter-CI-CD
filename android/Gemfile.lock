@@ -5,6 +5,7 @@ GEM
       base64
       nkf
       rexml
+    abbrev (0.1.2)
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
     artifactory (3.0.17)
@@ -228,7 +229,8 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  fastlane
+  abbrev
+  fastlane (>= 2.212.0)
   fastlane-plugin-firebase_app_distribution
 
 BUNDLED WITH
