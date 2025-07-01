@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "505398063190",
+    "project_id": "fluttrer-ci-cd",
+    "storage_bucket": "fluttrer-ci-cd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:505398063190:android:fbb8d6f965f14986c54bf7",
+        "android_client_info": {
+          "package_name": "com.example.flutter_ci_cd"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoZloJMyEm2dZbYpoPhLrQ7Uk2gTaW7Ho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:505398063190:android:42c663d8497c8851c54bf7",
+        "android_client_info": {
+          "package_name": "com.example.flutter_ci_cd.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoZloJMyEm2dZbYpoPhLrQ7Uk2gTaW7Ho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
