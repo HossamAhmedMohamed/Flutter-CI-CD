@@ -29,6 +29,13 @@ jobs:
         ruby-version: "3.4.4"
         bundler-cache: true
         working-directory: android
+
+    - name: Create .env file
+      run: |
+        echo "${{ secrets.DOTENV_FILE }}" > .env
+
+    - name: Get dependencies
+      run: flutter pub get
         
     - name: Build and Distribute App
       env:
