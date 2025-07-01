@@ -29,11 +29,6 @@ jobs:
         ruby-version: "3.4.4"
         bundler-cache: true
         working-directory: android
-
-    - name: Add Linux platform to Gemfile.lock
-      run: bundle lock --add-platform x86_64-linux
-      working-directory: android
-
         
     - name: Build and Distribute App
       env:
