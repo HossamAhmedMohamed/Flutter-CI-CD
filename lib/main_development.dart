@@ -1,5 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_ci_cd/core/config/app_config.dart';
+import 'package:flutter_ci_cd/core/config/dev_config/dev_config.dart';
+import 'package:flutter_ci_cd/core/services/service_locator.dart';
 import 'package:flutter_ci_cd/firebase_options.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
@@ -7,21 +10,23 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await dotenv.load(fileName: ".env");
-  runApp(const MyApp());
+  setupLocator(DevConfig());
+  runApp(MyApp(config: sl<AppConfig>()));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({super.key, required this.config});
 
+  final AppConfig config;
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: config.primaryColor),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: config.appName),
     );
   }
 }
